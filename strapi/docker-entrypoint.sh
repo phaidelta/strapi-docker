@@ -42,4 +42,10 @@ fi
 
 echo "Starting your app..."
 
+if [ -f "yarn.lock" ]; then
+  yarn build
+else
+  npm run build
+fi
+
 exec "$@"
